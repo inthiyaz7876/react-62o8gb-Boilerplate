@@ -20,29 +20,29 @@ class Summary extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { startDateTime: nextStartDateTime, endDateTime: nextEndDateTime } = nextProps;
-    const { startDateTime: curStartDateTime, endDateTime: curEndDateTime } = this.props;
+    // const { startDateTime: nextStartDateTime, endDateTime: nextEndDateTime } = nextProps;
+    // const { startDateTime: curStartDateTime, endDateTime: curEndDateTime } = this.props;
 
 
-    if ((curStartDateTime !== nextStartDateTime || curEndDateTime !== nextEndDateTime || curType !== nextType)) {
-      this.onloadPage({ startDate: nextStartDateTime, endDate: nextEndDateTime, type: nextType });
-    }
+    // if ((curStartDateTime !== nextStartDateTime || curEndDateTime !== nextEndDateTime || curType !== nextType)) {
+    //   this.onloadPage({ startDate: nextStartDateTime, endDate: nextEndDateTime, type: nextType });
+    // }
   }
 
   componentWillUnmount() {
 
   }
 
-  onloadMetrics = (params) => {
-    const { actions, startDateTime, endDateTime, getData } = this.props;
-    const { getData } = actions;
-getData();
+//   onloadMetrics = (params) => {
+//     const { actions, startDateTime, endDateTime, getData } = this.props;
+//     const { getData } = actions;
+// getData();
 
-  }
+//   }
 
 
   render() {
-    const { oneData } = this.props;
+    const {  } = this.props;
     const {  } = this.state;
 
 
@@ -61,11 +61,11 @@ Summary.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  one: state.appConfig.one,
+  //one: state.appConfig.one,
 });
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ getData }, dispatch)
+  actions: bindActionCreators({ }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(injectIntl(Summary));
